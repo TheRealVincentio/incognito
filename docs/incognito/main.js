@@ -61,10 +61,13 @@ function update() {
 		for (let j = 0; j < G.RC; j++){
 			if(score>(i*G.RC+j)){
 				color(this.c[12]);
+				box(boxes[i*G.RC+j].pos,5);
 			}else{
 				color(boxes[i*G.RC+j].co);
-			}
-			box(boxes[i*G.RC+j].pos,5);
+				box(boxes[i*G.RC+j].pos.x+rndi(-1,1),
+					boxes[i*G.RC+j].pos.y+rndi(-1,1),
+					5);
+			}	
 		}
 	}
 	
